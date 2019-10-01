@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../static/css/todo.css">
+    </head>
+
+    <body>
+        <div id="container">
+        <div id="header">
+            <img src="../static/images/conda.ico" alt="Img">
+        <div class="button">
+            <ul>
+                <li><a class="active" href="{{url_for('index')}}">Home</a></li>                
+                {%if current_user.is_authenticated%}
+                <li><a class="active" href="{{url_for('bookmark')}}">Bookmark</a></li>
+                <li><a class="active" href="{{url_for('add_bm')}}">Add Bookmark</a></li>
+                <li class='register active'><a href="{{url_for('logout')}}">Logout</a></li>
+                {%else%}
+                <li><a class="active" href="{{url_for('login')}}">Login</a></li>
+                <li class='register active'><a href="{{url_for('register')}}">Get Started</a></li>
+                {%endif%}
+            </ul>
+        </div>
+        </div><br><br>
+
+
+{%with messages = get_flashed_messages()%}
+
+{%if messages%}
+
+{%for message in messages%}
+<div class="flash">
+<a >{{message}}</a>
+</div>
+{%endfor%}
+
+{%endif%}
+
+{%endwith%}
+
+        <div class="form">
+           
+                {%block formcontent%}
+                {%endblock%}
+            
+        </div>
+
+    {{moment.include_jquery()}}
+    {{moment.include_moment()}}
+</div>
+    </body>
+</html>

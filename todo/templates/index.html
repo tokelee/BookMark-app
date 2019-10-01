@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{%block formcontent%}
+<h1>Welcome {{user.username}}!</h1>
+<p>Current time {{time}}</p>
+<p>Current date {{date}}</p>
+
+<p><a href="{{url_for('bookmark')}}">click here</a> to view your bookmarks</p>
+{%endblock%}

@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block formcontent%}
+<form action="" method="POST">
+{{form.csrf_token}}
+<h3>RESET PASSWORD</h3>
+<table>  
+    <tr>
+        <td class="pylabels">{{form.password.label}}</td>
+        <td>{{form.password(size=40)}}</td>
+    
+    </tr>
+
+    <tr>
+        <td class="pylabels">{{form.password2.label}}</td>
+        <td>{{form.password2(size=40)}}</td>
+    
+    </tr>
+
+</table>
+<br>
+<button class="button-success" type="submit">Verify</button>
+</form>
+{%endblock%}

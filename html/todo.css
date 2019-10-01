@@ -1,0 +1,58 @@
+body{
+    background-image: url('diary.jpg');
+    background-color: black;
+    margin: 0;
+    font-size: 100%;
+}
+
+#header{
+    /*border: thin solid brown;*/
+    margin-top: 5px;
+    width: auto;
+    height: 3.5em;
+    position: relative;
+}
+
+.button ul{
+    padding: 10px;
+    text-align: right;
+    
+}
+
+.button ul li{
+    list-style: none;
+    display: inline;
+}
+
+.button ul li a{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%
+}
+
+.button ul li a:hover{
+    color: rgb(172, 157, 157)
+}
+
+.register{
+    border: thin solid green;
+    background-color: green;
+    padding: 10px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+img{
+    height: 3.5em;
+    position: fixed;
+}
+
+.form{
+    display: block;
+    margin: 5em auto;
+    background-color: wheat;
+    width: 25em;
+    height: 25em;
+    box-shadow: 5px 5px green;
+}

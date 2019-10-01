@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+
+{%block formcontent%}
+
+<form action="" method="POST">
+{{form.csrf_token}}
+<h3>CREATE ACCOUNT</h3>
+<table>
+<tr>
+    <td class="pylabels">{{form.username.label}}</td>
+    <td>{{form.username(size=35)}}</td>
+        {%if form.username.errors%}
+        
+    <ul style="color: red">  
+        {%for error in form.username.errors%}
+        <li>{{error}}</li>  
+        {%endfor%}
+     
+    </ul>
+    {%endif%}    
+   
+</tr>
+<tr>
+    <td class="pylabels">{{form.email.label}}</td>
+    <td>{{form.email(size=35)}}</td>
+ </tr>
+<tr>
+    <td class="pylabels">{{form.password.label}}</td>
+    <td>{{form.password(size=35)}}</td>
+</tr>
+<tr>
+    <td class="pylabels">{{form.password2.label}}</td>
+    <td>{{form.password2(size=35)}}</td>
+</tr>
+
+</table>
+<br>
+<button type="submit">Sign me up</button>
+</form>
+
+
+{%endblock%}

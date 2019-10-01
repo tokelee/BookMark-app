@@ -1,0 +1,112 @@
+body{
+    background-image: url('../images/diary.jpg');
+    background-color: black;
+    margin: 0;
+    font-size: 100%;
+}
+
+#container{
+    width: 99%;
+    height: 100%;
+}
+
+#header{
+    /*border: thin solid brown;*/
+    margin-top: 5px;
+    width: auto;
+    height: 3.5em;
+    position: relative;
+}
+
+.button ul{
+    padding: 10px;
+    text-align: right;
+    
+}
+
+.button ul li{
+    list-style: none;
+    display: inline;
+}
+
+.button ul li a{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%
+}
+
+.button ul li a:hover{
+    color: rgb(172, 157, 157);
+}
+
+
+.register{
+    border: thin solid green;
+    background-color: green;
+    padding: 8px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+
+img{
+    height: 3.5em;
+    position: fixed;
+}
+
+.form{
+    display: block;
+    margin: 5em auto;
+    background-color: wheat;
+    width: 30em;
+    box-shadow: 5px 5px 10px green;
+    padding: 15px;
+}
+
+.flash a{
+    background-color: grey;
+    padding: 7px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    align-content: center;
+}
+
+h1,h2,h3,h4,p{
+    color: grey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.pylabels{
+    color: rgb(83, 67, 67);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 95%
+}
+
+button{
+    font-size: 98%;
+    background-color: rgb(116, 99, 99);
+    border: thin solid rgb(116, 99, 99);
+    border-radius: 6px;
+    padding: 5px;
+    color: wheat
+}
+
+.button-danger{
+    font-size: 98%;
+    background-color: red;
+    border: thin solid red;
+    border-radius: 6px;
+    padding: 5px;
+    color: wheat
+}
+
+.button-success{
+    font-size: 98%;
+    background-color: green;
+    border: thin solid green;
+    border-radius: 6px;
+    padding: 5px;
+    color: wheat
+}

@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block formcontent%}
+
+
+    <h1>EDIT BOOK</h1>
+    <form action="" method="POST">
+        {{form.csrf_token}}
+        <table>
+            <tr>
+                <td>{{form.url.label}}</td>
+                <td>{{form.url(size=40)}}</td>
+            </tr>
+
+            <tr>
+                <td>{{form.description.label}}</td>
+                <td>{{form.description(size=40)}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button class="button-success" type="submit">submit</button></td>
+            </tr>
+        </table>
+    </form>
+
+
+{%endblock%}

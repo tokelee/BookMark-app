@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{%block formcontent%}
+<h1>THIS ARE YOUR BOOKMARKS</h1>
+{%if new_bookmarks%}
+<ul>
+    {%for bm in new_bookmarks%}
+    <h2 style="color: cadetblue; margin-bottom: 0%">{{bm.description}}</h2>
+    <li style="list-style: none;"> <a href="{{bm.url}}">{{bm.url}}</a></li>
+    <br>
+    
+    <!--{{bm.user.username}}--> <span style="opacity: 0.5">Added {{moment(bm.date).fromNow()}}</span>
+    {%if current_user == bm.user%}
+    <a style="float: right" href="{{url_for('delete_bookmark', bookmark_id=bm.id)}}">delete</a>
+    <a style="float: right; margin-right: 5%" href="{{url_for('edit_bookmark', bookmark_id=bm.id)}}">edit</a>
+    {%endif%}
+    <hr>
+    {%endfor%}
+</ul>
+{%else%}
+No bookmarks Yet.
+{%endif%}
+{%endblock%}

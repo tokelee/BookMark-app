@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{%block formcontent%}
+<h1>ADD BOOKMARKS HERE</h1>
+<div>
+    <p>Note: Please add 'http://' as a suffix to your url <br>
+        <span style="color: cadetblue; opacity: 0.8;" >"example: http://google.com"</span>
+    </p>
+</div>
+<form action="/add-bookmark" method="POST">
+    {{form.csrf_token}}
+<table>
+    <tr>
+        <td class="pylabels">{{form.url.label}}</td>
+        <td>{{form.url(size=40)}}</td>
+    </tr>
+    <tr>
+        <td class="pylabels">{{form.description.label}}</td>
+        <td>{{form.description(size=40)}}</td>
+    </tr>
+</table>
+<br>
+<button type="submit">Submit</button>
+</form>
+{%endblock%}
